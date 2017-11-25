@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% block title %}Category{% endblock title %}
+{% block content %}
+
+<section class="section">
+
+    <h3 class="lead"> {{category}} Items</h3>
+
+    <div class="list-group" >
+        {% for i in items %}
+        <div class="list-group-item">
+            <a href = "{{url_for('showItem', category_name = i.category.name, item_name = i.name)}}" class="list-group-item-heading" > {{ i.name }} </a>
+            <p class="list-group-item-text"> {{i.description}} </p>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+
+body {
+  background-color: #f5f5f5;
+  font-family: 'Lora', serif;
+  font-size: 13px;
+}
+
+input,
+textarea,
+select {
+  letter-spacing: 1px;
+  resize: none;
+  width: 100%;
+}
+
+select {
+  border: 2px solid #eaeaea;
+  padding: 13px 15px;
+}
+
+h1,
+h3,
+h4,
+h5 {
+  font-family: 'Bree Serif', serif;
+  margin: 0;
+}
+
+.top-padding {
+  padding-top: 10px;
+}
+
+.left-padding {
+  padding-left: 10px;
+}
+
+.section {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  position: relative;
+  width: 100%;
+}
+
+.alert-info {
+  margin-top: 70px;
+}

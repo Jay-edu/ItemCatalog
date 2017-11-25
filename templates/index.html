@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+{% block title %}Catalog{% endblock title %}
+{% block content %}
+
+<section class="section">
+
+    {% if 'username' not in session %}
+    {% else %}
+      <h5> <a href="{{url_for('addItem')}}" class="top-padding">Add Item</a> </h5>
+    {% endif %}
+
+    <h3 class="lead">Latest Items</h3>
+
+    <div class="list-group" >
+        {% for i in items %}
+        <div class="list-group-item">
+            <a href = "{{url_for('showItem', category_name = i.category.name, item_name = i.name)}}" class="list-group-item-heading"> {{ i.name }} <em> ( {{i.category.name}} )</em> </a>
+            <p class="list-group-item-text"> {{i.description}} </p>
+        </div>
+        {% endfor %}        
+    </div>
+
+</section>
+
+{% endblock %}

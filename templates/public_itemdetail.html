@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+{% block title %}{{ item.name }}{% endblock title %}
+{% block content %}
+
+<section class="section">
+
+    <h3 class="lead">{{ item.name }}</h3>
+
+    <div class="list-group-item">
+        <label>Item Name:</label>
+        <p class="list-group-item-text"> {{item.name}} </p>
+        <br/>
+        
+        <label>Description:</label>
+        <p class="list-group-item-text"> {{item.description}} </p>
+        <br/>
+
+        <label>Category:</label>
+        <p class="list-group-item-text"> {{item.category.name}} </p>
+
+    </div>
+
+</section>
+
+{% endblock %}
